@@ -1,0 +1,13 @@
+#!/usr/bin/perl
+
+## no critic (Capitalization)
+package bin;
+
+use strict;
+use warnings;
+
+use Foo::Bar;
+
+Foo::Bar::foo_bar(@ARGV);
+
+1;

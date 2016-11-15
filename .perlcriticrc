@@ -1,0 +1,37 @@
+################################################################################
+# Perl-Critic Configuration File
+################################################################################
+
+################################################################################
+# Default Configuration
+################################################################################
+
+# --severity N
+#   Directs perlcritic to only apply Policies with a severity greater than N.
+#   Severity values are integers ranging from 1 (least severe) to 5 (most severe).
+#   The default is 5
+severity = 1
+
+# --verbose N | FORMAT
+#   Sets the verbosity level or format for reporting violations.
+#   If given a number (N), perlcritic reports violations using one of the predefined formats described below.
+verbose = 8
+
+################################################################################
+# Policies Configurations
+################################################################################
+
+[InputOutput::RequireCheckedSyscalls]
+exclude_functions = print
+
+[CodeLayout::RequireTidyCode]
+perltidyrc = .perltidyrc
+
+################################################################################
+# Exceptions
+################################################################################
+
+[-Documentation::PodSpelling]
+[-Modules::RequireVersionVar]
+[-RegularExpressions::RequireDotMatchAnything]
+[-RegularExpressions::RequireLineBoundaryMatching]
